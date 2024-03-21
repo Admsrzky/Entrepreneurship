@@ -4,15 +4,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Origin Store</title>
+    <!-- Flowbite -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.css"  rel="stylesheet" />
+    <!-- Fonts awesome -->
     <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+     <!-- fonts google poppins start -->
+     <link rel="preconnect" href="https://fonts.googleapis.com" />
+     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link rel="stylesheet" href="src/output.css">
 </head>
 <body>
-    <!--Nav-->
-        <nav class="bg-primary fixed top-0 z-10 w-full border-gray-200">
-            <div class="max-w-screen-xl flex flex-wrap items-center md:gap-32 justify-between  mx-auto p-6">
-            <a href="https://flowbite.com/" class="flex items-center md:space-x-3 space-x-0 rtl:space-x-reverse">
+        <!--Nav-->
+        <nav class="bg-primary md:fixed md:top-0 md:z-10 md:w-full border-gray-200">
+            <div class="max-w-screen-xl flex flex-wrap items-center md:gap-32 justify-between mx-auto p-6">
+            <a href="index.html" class="flex items-center md:space-x-3 space-x-0 rtl:space-x-reverse">
                 <span class="self-center text-2xl font-semibold whitespace-nowrap text-red-500">Cake Shop</span>
             </a>
             <button data-collapse-toggle="navbar-default" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden" aria-controls="navbar-default" aria-expanded="false">
@@ -27,11 +32,31 @@
                     <a href="#" class="block py-2 px-3 text-red-500 bg-blue-700 rounded md:bg-transparent md:p-0" aria-current="page">Home</a>
                 </li>
                 <li>
-                    <a href="#" class="block py-2 px-3 md:hover:text-blue-700 md:p-0 md:dark:hover:text-blue-500">Cupcake</a>
+                    <a href="#cupcake" class="block py-2 px-3 md:hover:text-blue-700 md:p-0 md:dark:hover:text-blue-500">Cupcake</a>
                 </li>
-                <li>
-                    <a href="#" class="block py-2 px-3 md:hover:text-blue-700 md:p-0 md:dark:hover:text-blue-500">Recipes</a>
+                
+                <li id="dropdownHoverButton" data-dropdown-toggle="dropdownHover" data-dropdown-trigger="hover" class="font-medium text-center inline-flex items-center" type="button">Cake 
+                    <svg class="w-2.5 h-2.5 ms-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
+                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 4 4 4-4"/>
+                    </svg>
                 </li>
+                    <!-- Dropdown menu -->
+                    <div id="dropdownHover" class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700">
+                        <ul class="py-2 text-sm text-gray-700 dark:text-gray-200" aria-labelledby="dropdownHoverButton">
+                        <li>
+                            <a href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Recipes</a>
+                        </li>
+                        <li>
+                            <a href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Instagram</a>
+                        </li>
+                        <li>
+                            <a href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Youtube</a>
+                        </li>
+                        <li>
+                            <a href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Whatsaap</a>
+                        </li>
+                        </ul>
+                    </div>
                 <li>
                     <a href="#" class="block py-2 px-3 md:hover:text-blue-700 md:p-0 md:dark:hover:text-blue-500">Blog</a>
                 </li>
@@ -57,18 +82,20 @@
             </div>
             </div>
         </nav>
-  
-    <!-- Navbar end -->
-        <div class="-space-y-24 mb-5">
+        <!-- Navbar end -->
+        <!-- baground  -->
+        <div class="md:-space-y-24 md:mb-20 -space-y-7">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
                 <path fill="#ffead0" fill-opacity="1" d="M0,224L1440,224L1440,0L0,0Z"></path>
             </svg>
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
-                <path fill="#ffead0" fill-opacity="1" d="M0,192L80,208C160,224,320,256,480,272C640,288,800,288,960,272C1120,256,1280,224,1360,208L1440,192L1440,0L1360,0C1280,0,1120,0,960,0C800,0,640,0,480,0C320,0,160,0,80,0L0,0Z"></path>
-            </svg>   
+            <div class="md:">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+                    <path fill="#ffead0" fill-opacity="1" d="M0,192L80,208C160,224,320,256,480,272C640,288,800,288,960,272C1120,256,1280,224,1360,208L1440,192L1440,0L1360,0C1280,0,1120,0,960,0C800,0,640,0,480,0C320,0,160,0,80,0L0,0Z"></path>
+                </svg>
+            </div>   
         </div>
    
-        <div class="absolute top-20 left-[5.8rem]">
+        <div class="md:absolute md:top-20 md:left-[5.8rem]">
             <div class="w-full flex items-center space-x-72">
                 <div class="block w-[30rem] space-y-4 text-left -mt-20">
                     <p class="text-3xl font-bold tracking-widest">Yummy Sweeties Delivered <br> to your dining table!</p>
@@ -90,20 +117,105 @@
             </div>
         </div>
 
-        <div class="w-full h-screen space-y-10">
-            <div class="mx-auto text-center space-y-3">
+        <!-- Content -->
+        <div class="w-full h-screen space-y-10 mb-10">
+            <div id="cupcake" class="mx-auto text-center space-y-3">
                 <p class="text-3xl font-bold">This Week's Specials</p>
                 <p>Try our most popular signature cupcakes and taste the difference</p>
             </div>
-            <div class="flex items-center justify-center gap-10">
-                <div class="bg-white shadow-2xl rounded w-[15rem] h-[18.8rem] px-8 text-center space-y-2">
+            <div class="flex items-center justify-center gap-14">
+                <div class="bg-primary shadow-2xl rounded-md w-[15rem] h-[19.5rem] px-8 text-center space-y-2">
                     <div class="absolute ml-[10rem]">
-                        <i class="fa fa-heart-o" aria-hidden="true"></i>                    
+                        <i class="fa fa-heart-o fa-lg ml-4 mt-4 text-red-500" aria-hidden="true"></i>                    
                     </div>
                     <img class="w-60" src="./dist/img/cake-bg.png" alt="">
                         <p>Cupcake Original Series</p>
-                        <p class="text-red-500 font-bold">Rp. 10.000</p>
-                        <button type="button" class="bg-red-500 p-2 px-6 rounded text-white text-sm font-semibold uppercase">Order This</button>
+                        <p class="text-red-500 font-bold">IDR. 10.000</p>
+                        <button type="button" class="bg-red-500 p-2 px-6 rounded text-white text-sm font-semibold uppercase hover:bg-transparent border hover:border-red-500 hover:text-red-500 hover:font-bold transition-all duration-300">Order This</button>
+                </div>
+                
+                <div class="bg-primary shadow-2xl rounded w-[15rem] h-[19.5rem] px-8 text-center space-y-4">
+                    <div class="absolute ml-[10rem]">
+                        <i class="fa fa-heart-o fa-lg ml-4 mt-4 text-red-500 mb-4" aria-hidden="true"></i>                    
+                    </div>
+                    <img class="w-80 h-36 mt-20" src="./dist/img/cake2-bg.png" alt="">
+                        <p>Cupcake Family</p>
+                        <p class="text-red-500 font-bold">IDR. 10.000</p>
+                        <button type="button" class="bg-red-500 p-2 px-6 rounded text-white text-sm font-semibold uppercase hover:bg-transparent border hover:border-red-500 hover:text-red-500 hover:font-bold transition-all duration-300">Order This</button>
+                </div>
+               
+                <div class="bg-primary shadow-2xl rounded w-[15rem] h-[19.5rem] px-8 text-center space-y-5">
+                    <div class="absolute ml-[10rem]">
+                        <i class="fa fa-heart-o fa-lg ml-4 mt-4 text-red-500" aria-hidden="true"></i>                    
+                    </div>
+                    <img class="w-80 h-32 mt-10" src="./dist/img/cake3.png" alt="">
+                        <p>Cupcake Healty </p>
+                        <p class="text-red-500 font-bold">IDR. 10.000</p>
+                        <button type="button" class="bg-red-500 p-2 px-6 rounded text-white text-sm font-semibold uppercase hover:bg-transparent border hover:border-red-500 hover:text-red-500 hover:font-bold transition-all duration-300">Order This</button>
+                </div>
+                
+                <div class="bg-primary shadow-2xl rounded w-[15rem] h-[19.5rem] px-8 text-center space-y-2">
+                    <div class="absolute ml-[10rem]">
+                        <i class="fa fa-heart-o fa-lg ml-4 mt-4 text-red-500" aria-hidden="true"></i>                    
+                    </div>
+                    <img class="w-60" src="./dist/img/cake-bg.png" alt="">
+                        <p>Cupcake Origin Family</p>
+                        <p class="text-red-500 font-bold">IDR. 10.000</p>
+                        <button type="button" class="bg-red-500 p-2 px-6 rounded text-white text-sm font-semibold uppercase hover:bg-transparent border hover:border-red-500 hover:text-red-500 hover:font-bold transition-all duration-300">
+                            Order This
+                        </button>
+                </div>
+            </div>
+        </div>
+        <!-- Content End -->
+
+        <!-- Blog -->
+        <div class="w-full h-screen">
+            <div class="flex items-center mx-36 mt-10 gap-40">
+                <img src="./dist/img/blog-kue.png" class="w-[19rem] rounded-lg">
+                <div class="block -mt-20 text-center space-y-2 w-[27rem]">
+                    <p class="text-4xl text-gray-600 font-semibold">The Cake's</p>
+                    <p class="text-slate-400 font-medium">QUALITY CACAO FROM AROUND THE GLOBE</p>
+                    <div class="space-y-10">
+                        <p class="w-14 h-[1px] bg-slate-600 ml-48"></p>
+                        <p class="text-slate-500">Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit, enim! Molestias exercitationem, ipsa maxime aliquid deleniti dicta! Consequatur quia officia rerum. Nisi sequi eligendi nemo facilis voluptatibus vitae pariatur dicta.</p>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+        <!-- End Blog -->
+
+        <!-- Contact Us -->
+        <div class="w-full h-screen">
+            <div class="pt-10 text-center tracking-widest space-y-2">
+                <p class="text-4xl text-slate-600">Contact Us</p>
+                <div class="flex gap-3 items-center justify-center tracking-widest text-slate-600">
+                    <p class="text-xl tracking-widest">Cakeshop.com</p>
+                    <p class="text-xl">||</p>
+                    <p class="text-xl">Telp 082112763727</p>
+                </div>
+                <p class="w-20 h-[2px] bg-slate-600 ml-[41rem]"></p>
+                <div class="flex items-center justify-center gap-5 pt-5">
+                    <a href=""><i class="fa-brands fa-instagram fa-xl hover:text-red-500 transition-all duration-300"></i></a> 
+                    <a href=""><i class="fa-brands fa-youtube fa-xl hover:text-red-600 transition-all duration-300"></i></a>
+                    <a href=""><i class="fa-brands fa-github fa-xl hover:text-blue-500 transition-all duration-300"></i></a>                
+                </div>
+                <div class="flex mx-[27rem] text-slate-500">
+                    <div class="block space-y-4">
+                        <div class="space-y-2">
+                            <label for="" class="-ml-60 text-sm">Your Name*</label><br>
+                            <input class="h-8 w-80 -mt-10" type="text" placeholder="Input your name this">    
+                        </div>                    
+                        <div class="space-y-2">
+                            <label for="" class="-ml-60 text-sm">Your Email*</label><br>
+                            <input class="h-8 w-80 -mt-10" type="text" placeholder="Input your name this">    
+                        </div>                    
+                        <div class="space-y-2">
+                            <label for="" class="-ml-56 text-sm">Your Subject*</label><br>
+                            <input class="h-8 w-80 -mt-10" type="text" placeholder="Input your name this">    
+                        </div>                    
+                    </div>
                 </div>
             </div>
         </div>
@@ -115,6 +227,8 @@
 
     
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js"></script>   
+<script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js"></script>
+<script src="https://kit.fontawesome.com/30df3c363d.js" crossorigin="anonymous"></script>
+
 </body>
 </html>
